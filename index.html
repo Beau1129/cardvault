@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardVault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">C</div>
+          <div>
+            <p class="eyebrow">Workspace</p>
+            <h1>CardVault</h1>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active">Dashboard</button>
+          <button class="nav-item">Contacts</button>
+          <button class="nav-item">Collections</button>
+          <button class="nav-item">Insights</button>
+          <button class="nav-item">Settings</button>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="sidebar-label">Storage</p>
+          <strong>4.8 GB</strong>
+          <span>of 10 GB used</span>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow muted">Overview</p>
+            <h2>Business card dashboard</h2>
+          </div>
+          <button class="primary-btn">+ Add card</button>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card accent-blue">
+            <span>Total cards</span>
+            <strong id="total-cards">0</strong>
+            <small>Across all teams</small>
+          </article>
+          <article class="stat-card accent-green">
+            <span>Scanned today</span>
+            <strong>28</strong>
+            <small>+12% vs yesterday</small>
+          </article>
+          <article class="stat-card accent-purple">
+            <span>Sync quality</span>
+            <strong>96%</strong>
+            <small>Automatically matched</small>
+          </article>
+        </section>
+
+        <section class="toolbar">
+          <label class="search-wrap">
+            <span>Search</span>
+            <input id="search-input" type="text" placeholder="Search people, companies, notes..." />
+          </label>
+          <button class="secondary-btn">Export</button>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel card-list-panel">
+            <div class="panel-header">
+              <h3>Recent cards</h3>
+              <button class="ghost-btn">View all</button>
+            </div>
+
+            <div id="card-list" class="card-list"></div>
+          </div>
+
+          <div class="panel form-panel">
+            <div class="panel-header">
+              <h3>Add a card</h3>
+            </div>
+
+            <form id="card-form" class="card-form">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" placeholder="Jordan Lee" required />
+              </label>
+
+              <label>
+                <span>Company</span>
+                <input name="company" type="text" placeholder="Northstar Studio" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" placeholder="jordan@northstar.dev" required />
+              </label>
+
+              <label>
+                <span>Role</span>
+                <input name="role" type="text" placeholder="Product Designer" required />
+              </label>
+
+              <label>
+                <span>Notes</span>
+                <textarea name="notes" rows="3" placeholder="Met at Startup Day 2026"></textarea>
+              </label>
+
+              <button type="submit" class="primary-btn full-width">Save contact</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
